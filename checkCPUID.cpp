@@ -10,7 +10,7 @@ bool isVM(){
         mov eax,1;
         cpuid;
         mov dw_ecx,ecx;
-        and ecx,0x80000000;
+        and ecx,0x80000000;//取最高位
         test ecx,ecx;
         setz[bFlag];
         popfd;
