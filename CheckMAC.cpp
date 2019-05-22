@@ -4,7 +4,7 @@
 bool checkMAC(){
     char buffer[128];
     char result[1024*50] = "";
-    char MAC[] = "08-00-27";
+    char MAC[] = "08-00-27";//"00-05-69" , "00-0c-29" ,"00-50-56"
     FILE *pipe = _popen("ipconfig /all","r");
     if(!pipe)
         return 0;
@@ -24,9 +24,9 @@ bool checkMAC(){
 
 int main(){
     if(checkMAC())
-        printf("正常运行\n");
+        printf("脮媒鲁拢脭脣脨脨\n");
     else
-        printf("vbox虚拟机运行\n");
+        printf("vbox脨茅脛芒禄煤脭脣脨脨\n");
     getchar();
     
 }
