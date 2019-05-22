@@ -5,6 +5,7 @@
 #include <Windows.h>
 #include <winreg.h>
 
+//检查注册表
 bool checkReg() {
 	HKEY hkey;
 	if (RegOpenKey(HKEY_CLASSES_ROOT, "\\Applications\\VMwareHostOpen.exe", &hkey) == ERROR_SUCCESS) {
