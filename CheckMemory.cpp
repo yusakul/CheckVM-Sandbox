@@ -6,7 +6,7 @@ bool CheckMemory(){
     mst.dwLength = sizeof(mst);
     GlobalMemoryStatusEx(&mst);
     //printf("PhyMszie:%llu \n",mst.ullTotalPhys);
-    if(mst.ullTotalPhys < d_size)
+    if(mst.ullTotalPhys < d_size)//内存小于4GB
         return false;
     else
         return true;
