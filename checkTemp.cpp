@@ -7,6 +7,7 @@ bool CheckTemp(){
     DWORD dwRet;
     LPSTR pszOldVal;
     pszOldVal = (LPSTR)malloc(4096 * sizeof(char));
+    //获取系统环境变量:   当前用户临时文件夹 - C:\Users\Kandy\AppData\Local\Temp
     dwRet = GetEnvironmentVariableA("TEMP",pszOldVal, 4096);
 
     std::string stdstr = pszOldVal;
@@ -23,7 +24,7 @@ bool CheckTemp(){
         FindClose(hFind);
     }
     printf("count:%d\n",file_count);
-    if (file_count < 30)
+    if (file_count < 30)//检查文件数量是不是太少了 
         return false;
     else
         return true;
