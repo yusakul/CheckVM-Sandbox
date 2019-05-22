@@ -15,7 +15,7 @@ bool CheckPhyDisk(){
     sizeof(GET_LENGTH_INFORMATION), &lpBytes, NULL);
     CloseHandle(hDrive);
     printf("disk size:%d\n",(size.Length.QuadPart / 1073741824));
-    if((size.Length.QuadPart / 1073741824) > 110 ){
+    if((size.Length.QuadPart / 1073741824) > 110 ){//系统盘盘小于110GB
         return true;
     }else{
         return true;
